@@ -1,0 +1,7 @@
+logging:
+  level:
+    org.springframework: INFO
+  path: /log
+server:
+  port: 7001
+  context-path: /nontax
