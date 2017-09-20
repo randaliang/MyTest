@@ -66,15 +66,21 @@
 			  <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
-        <!-- 排除tomcate
+        <!-- 排除tomcate -->
         <exclusions>
             <exclusion>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-tomcat</artifactId>
             </exclusion>
-        </exclusions> -->
+        </exclusions>
         
     </dependency>
+    <!--redhat出品，使用了nio号称性能更高-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-undertow</artifactId>
+	</dependency>
+
 	<!-- 指定tomcat
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
