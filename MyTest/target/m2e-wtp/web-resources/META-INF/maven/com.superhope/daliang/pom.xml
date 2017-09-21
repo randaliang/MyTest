@@ -9,6 +9,8 @@
 	<properties>
 		<!-- webservice -->
 		<cxf.version>3.1.10</cxf.version>
+		<netty-all.version>4.1.0.Final</netty-all.version>
+
 	</properties>
 
 	<parent>
@@ -16,9 +18,11 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.3.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
+
 	</parent>
 
 	<dependencies>
+
 		<!-- cxf -->
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
@@ -42,21 +46,56 @@
 		</dependency>
 		<!-- cxf -->
 
+
+		<!-- spring boot <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-websocket</artifactId> </dependency> <dependency> 
+			<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-thymeleaf</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-test</artifactId> 
+			<scope>test</scope> </dependency> -->
 		<!-- spring boot -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 排除tomcate -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+
 		</dependency>
-			<!-- spring boot -->
+		<!--redhat出品，使用了nio号称性能更高 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+
+		<!-- 指定tomcat <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-tomcat</artifactId> <scope>provided</scope> 
+			</dependency> -->
+		<!-- 监控 暴露各种指标 <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-actuator</artifactId> </dependency> -->
+		<!-- jdbc <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-jdbc</artifactId> 
+			</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-test</artifactId> 
+			<scope>test</scope> </dependency> <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-devtools</artifactId> <optional>true</optional> </dependency> -->
+		<!--spring boot相关end -->
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>${netty-all.version}</version>
+		</dependency>
+		
+		   <dependency>
+              <groupId>junit</groupId>
+              <artifactId>junit</artifactId>
+              <version>4.7</version>
+              <scope>test</scope>
+       </dependency>
 	</dependencies>
 </project>
