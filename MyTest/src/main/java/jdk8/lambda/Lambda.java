@@ -14,31 +14,31 @@ import javax.swing.JButton;
 public class Lambda {
 
 	public static void main( String args[] ){
-//		//Java 8·½Ê½£º
-//		new Thread( () -> System.out.println("In Java8, Lambda expression rocks !!") ).start();
-//		Map<String, Integer> items = new HashMap<>();
-//		items.put("A", 10);
-//		items.put("B", 20);
-//		items.put("C", 30);
-//		items.put("D", 40);
-//		items.put("E", 50);
-//		items.put("F", 60);
-//
-//		items.forEach((k,v)->System.out.println("Item : " + k + " Count : " + v));
-//
-//		items.forEach((k,v)->{
-//		    System.out.println("Item : " + k + " Count : " + v);
-//		    if("E".equals(k)){
-//		        System.out.println("Hello E");
-//		    }
-//		});
+//		//Java 8ï¿½ï¿½Ê½ï¿½ï¿½
+		new Thread( () -> System.out.println("In Java8, Lambda expression rocks !!") ).start();
+		Map<String, Integer> items = new HashMap<>();
+		items.put("A", 10);
+		items.put("B", 20);
+		items.put("C", 30);
+		items.put("D", 40);
+		items.put("E", 50);
+		items.put("F", 60);
 
-		// Java 8Ö®ºó£º
+		items.forEach((k,v)->System.out.println("Item : " + k + " Count : " + v));
+
+		items.forEach((k,v)->{
+		    System.out.println("Item : " + k + " Count : " + v);
+		    if("E".equals(k)){
+		        System.out.println("Hello E");
+		    }
+		});
+
+		// Java 8Ö®ï¿½ï¿½
 		List features = Arrays.asList("Lambdas", "Default Method", "Stream API", "Date and Time API");
 		//features.forEach(n -> System.out.println(n));
 		 
-		// Ê¹ÓÃJava 8µÄ·½·¨ÒýÓÃ¸ü·½±ã£¬·½·¨ÒýÓÃÓÉ::Ë«Ã°ºÅ²Ù×÷·û±êÊ¾£¬
-		// ¿´ÆðÀ´ÏñC++µÄ×÷ÓÃÓò½âÎöÔËËã·û
+		// Ê¹ï¿½ï¿½Java 8ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ã£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½::Ë«Ã°ï¿½Å²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½C++ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		features.forEach(System.out::println);
 		
 	}
@@ -66,7 +66,7 @@ public class Lambda {
 	}
 	
 	public void buttonTest(){
-		// Java 8Ö®Ç°£º
+		// Java 8Ö®Ç°ï¿½ï¿½
 		JButton show =  new JButton("Show");
 //		show.addMouseListener((e) -> {
 //		    System.out.println("Light, Camera, Action !! Lambda expressions Rocks");
@@ -78,7 +78,7 @@ public class Lambda {
 		    }
 		});
 	
-		// Java 8·½Ê½£º
+		// Java 8ï¿½ï¿½Ê½ï¿½ï¿½
 		show.addActionListener((e) -> {
 		    System.out.println("Light, Camera, Action !! Lambda expressions Rocks");
 		});

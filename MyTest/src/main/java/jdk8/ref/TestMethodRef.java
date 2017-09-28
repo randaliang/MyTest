@@ -114,6 +114,10 @@ public class TestMethodRef {
         Comparator<Integer> com = (x, y) ->Integer.compare(x, y);
         //前提条件:和上面相同
         Comparator<Integer> com1 = Integer::compare;
+        System.out.println( "test3-- " + com.compare(1, 2) );
+        System.out.println( "test3-- " + com.compare(3, 2) );
+        
+        
     }
 
     //类::实例方法名
