@@ -9,10 +9,10 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
 
-public class SimpleServerHandler extends ChannelInboundHandlerAdapter {  
+public class SimpleServerHandler extends ChannelInboundHandlerAdapter {
 	  
     @Override  
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {  
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf buf = (ByteBuf)msg;  
         byte [] req = new byte[buf.readableBytes()];  
         buf.readBytes(req);  
@@ -22,7 +22,6 @@ public class SimpleServerHandler extends ChannelInboundHandlerAdapter {
         System.out.println("Netty-Server:Receive Message,"+ message);  
         ByteBuf in = Unpooled.copiedBuffer(message,Charset.forName("GBK"));
 		ctx.writeAndFlush(in).addListener(ChannelFutureListener.CLOSE);
-		
-    }  
-}  
+    }
+}
 

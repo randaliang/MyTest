@@ -16,7 +16,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
   
-public class HelloClient {  
+public class HelloClient {
     public void connect(String host, int port) throws Exception {  
         EventLoopGroup workerGroup = new NioEventLoopGroup();  
   
@@ -71,4 +71,4 @@ class HelloClientIntHandler extends ChannelInboundHandlerAdapter {
         ctx.write(encoded);  
         ctx.flush();  
     }  
-}  
+}
