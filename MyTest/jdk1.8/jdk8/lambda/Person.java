@@ -16,4 +16,11 @@ public class Person {
 	public String toJson() {
 		return "{" + "firstName:\"" + firstName + "\"," + "lastName:\"" + lastName + "\"," + "age:" + age + "}";
 	}
+	
+	public Person(){
+	}
+	
+	 public String toString() {
+		 return toJson();
+	 }
 }

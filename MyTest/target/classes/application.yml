@@ -5,3 +5,14 @@ logging:
 server:
   port: 7001
   context-path: /nontax
+
+spring:
+  redis:
+    host: 192.168.65.166
+    password: 
+    port: 6397
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
