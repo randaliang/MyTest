@@ -22,6 +22,12 @@ public class ReadWriteLockTest {
             new Thread(){
                 public void run(){
                     while(true){
+                    	try {
+							this.sleep(1000L);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
                         q3.put(new Random().nextInt(10000));
                     }
                 }            
