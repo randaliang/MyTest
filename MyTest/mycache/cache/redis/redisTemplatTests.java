@@ -19,7 +19,7 @@ import junit.framework.Assert;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = {Application.class}) 
-public class ApplicationTests {
+public class redisTemplatTests {
 
 	@Resource 
 	private StringRedisTemplate stringRedisTemplate;
@@ -56,14 +56,6 @@ public class ApplicationTests {
 
 	}
 	
-	
-	@Test
-	public void cacheableTest() throws Exception {
-		String s = rs.loadBankByBankId("111");
-		assertEquals(s, "111");
-		
-		s = rs.loadBankByBankId("冉大亮");
-		assertEquals(s, "冉大亮");
-	}
+
 
 }

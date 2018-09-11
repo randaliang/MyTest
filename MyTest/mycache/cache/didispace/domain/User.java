@@ -9,7 +9,6 @@ import java.io.Serializable;
  * @blog http://blog.didispace.com
  */
 public class User implements Serializable {
-
 	public User(){
 	}
 
