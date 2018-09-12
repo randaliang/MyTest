@@ -53,9 +53,20 @@ public class redisTemplatTests {
 		Assert.assertEquals(20, redisTemplate.opsForValue().get("超人").getAge().longValue());
 		Assert.assertEquals(30, redisTemplate.opsForValue().get("蝙蝠侠").getAge().longValue());
 		Assert.assertEquals(40, redisTemplate.opsForValue().get("蜘蛛侠").getAge().longValue());
+		
+
 
 	}
 	
+	@Test
+	public void testLock() throws Exception{
+		RedisLock lock = new RedisLock(redisTemplate, "lock_");
+		try {
+			if (lock.lock()) {}
+		} finally {
+			lock.unlock();
+		}
+	}
 
 
 }
